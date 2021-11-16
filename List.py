@@ -92,3 +92,54 @@ a=[1,2,3,4]
 b=[5,6,7,8]
 c=a.extend(b)
 print(c)
+print("***Exercise***")
+file=open("C://Users/user/Desktop/sample.txt")
+for line in file :
+    words=line.split()
+    if len(words)<3 :
+        continue
+    if words[0] != 'Even' :
+        continue
+    print(words[2])
+print("***Exercise*****")
+file=open("C://Users/user/Desktop/sample.txt","r")
+for line in file :
+    words=line.split()
+    if len(words)<3 or words[0] != 'Even' :
+        continue
+    print(words[2])
+print("******Exercise******")
+list=[]
+file=open("C://Users/user/Desktop/sample.txt","r")
+for line in file :
+    words=line.split()
+    for word in words :
+        if word in list :
+            continue
+        list.append(word)
+print(list)
+print("***Exercise*****")
+count=0
+file=open("C://Users/user/Desktop/sample.txt","r")
+for line in file :
+    words=line.split()
+    if len(words)<3 or words[0] != 'Even' :
+        continue
+    print(words[1])
+    count=count+1
+print(count)
+print("***Exercise*****")
+list=[]
+while True:
+    num=0.0
+    inp=input("Enter a number :")
+    if inp == 'done':
+        break
+    try :
+        num=float(inp)
+    except VaueError :
+        print('Invalid input')
+        quiy()
+    list.append(inp)
+print("Maximum :",max(list))
+print("Minimum :",min(list))
